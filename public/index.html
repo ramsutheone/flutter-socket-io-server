@@ -14,6 +14,7 @@
 
     <script>
         var socket = io();
+
         socket.on('connect', function() {
             console.log('Conectado al Servidor');
         });
@@ -29,6 +30,15 @@
 
         socket.on('mensaje', function(payload) {
             console.log('Escuchando en el navegador: ', payload);
+        })
+
+        socket.on('mensaje-cliente-broadcast', function(payload) {
+            console.log('Escuchando en el navegador: ', payload);
+        })
+
+        socket.on('bandasActivas', function(bands) {
+            console.clear();
+            console.table(bands);
         })
     </script>
 
