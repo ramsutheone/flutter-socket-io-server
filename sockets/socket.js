@@ -43,7 +43,8 @@ io.on('connection', client => {
         bands.deleteBand(payload.id);
         io.emit('bandasActivas', bands.getBands());
     });
-
+    //git push heroku HEAD:master
+    //https://sockets-server-ram.herokuapp.com
     /*
         client.on('other-msg', (payload) => {
             //console.log('Mensaje', payload);
